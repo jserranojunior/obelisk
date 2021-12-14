@@ -1,0 +1,25 @@
+{
+  "name": "obelisk",
+  "version": "1.0.0",
+  "description": "Functions in typescript to use",
+  "main": "index.ts",
+  "repository": "git@github.com:jserranojunior/obelisk.git",
+  "author": "Jorge Serrano Junior <jorgeserranojunior@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@types/jest": "^27.0.3",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "ts-node": "^10.4.0"
+  }
+}
