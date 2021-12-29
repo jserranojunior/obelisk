@@ -1,8 +1,8 @@
 {
-  "name": "obelisk",
+  "name": "alvitre-obelisk",
   "version": "1.0.0",
   "description": "Functions in typescript to use",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "repository": "git@github.com:jserranojunior/obelisk.git",
   "author": "Jorge Serrano Junior <jorgeserranojunior@hotmail.com>",
   "license": "MIT",
