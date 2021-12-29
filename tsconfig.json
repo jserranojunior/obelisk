@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "useDefineForClassFields": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "strict": true,
-    "outDir": "/dist",
-    "sourceMap": true
-  }
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
