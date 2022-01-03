@@ -1,21 +1,3 @@
-export function dataFormatoBr(value: any) {
-  var options: any = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  };
-
-  if (value) {
-    if (value.indexOf("T") >= 0) {
-      value = new Date(value).toLocaleDateString("pt-BR", options);
-    } else if (value.indexOf("-") >= 0) {
-      value = value.replace(/-/g, ",");
-      value = new Date(value).toLocaleDateString("pt-BR", options);
-    }
-    return value;
-  }
-}
-
 export function dateUStoJsFull(value: any) {
   if (value) {
     var data = value.replace(/-/g, ",");
@@ -36,27 +18,6 @@ export function dateUStoJs(value: any) {
   } else {
     return value;
   }
-}
-
-export function dateUstoPtBr(data: any) {
-  if (data) {
-    var dia = data.split("-")[2];
-    var mes = data.split("-")[1];
-    var ano = data.split("-")[0];
-    return ("0" + dia).slice(-2) + "/" + ("0" + mes).slice(-2) + "/" + ano;
-  }
-}
-
-export function dateJstoPtBr(value: any) {
-  var d = new Date(value),
-    month = "" + (d.getMonth() + 1),
-    day = "" + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = "0" + month;
-  if (day.length < 2) day = "0" + day;
-
-  return [day, month, year].join("/");
 }
 
 export function dateJstoUs(value: any) {
