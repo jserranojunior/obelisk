@@ -3,10 +3,9 @@ import {
   verifyLanguageDate,
   checkFormatDate,
   formatDateToJs,
-  convertDateJstoPtBr,
-} from "./convertDateToPtBr";
+} from "./convertDateToJs";
 
-describe("convertDateToPtBr()", () => {
+describe("convertDateToJS()", () => {
   test("verifyTypeOf withDateJs(return aways = 'date')", () => {
     const ACTUAL_DATE = new Date();
     expect(verifyTypeOf(ACTUAL_DATE)).toBe("date");
@@ -39,9 +38,5 @@ describe("convertDateToPtBr()", () => {
   });
   test("formatDateToJs with datePtBr(return aways = '1993-06-10T03:00:00.000Z')", () => {
     expect(formatDateToJs("10/06/1993")).toEqual(new Date("1993,06,10"));
-  });
-  // Teste mandar formato JS e retornar igual o valor
-  test("convertDateJstoPtBr (return aways = '10/06/1993')", () => {
-    expect(convertDateJstoPtBr(new Date("1993,06,10"))).toEqual("10/06/1993");
   });
 });

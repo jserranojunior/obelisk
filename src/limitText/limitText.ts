@@ -18,4 +18,3 @@ export function filterValueToSlice(value: string, tamanho: number) {
 export function limitText(value: string, tamanho: number) {
   return filterValueToSlice(value, tamanho);
 }
-//# sourceMappingURL=limitText.js.map
