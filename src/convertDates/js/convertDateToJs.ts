@@ -47,15 +47,15 @@ export function checkFormatDate(value: string | Date) {
 
 export function formatDateToJs(dateToFormatInJS: string | Date) {
   if (
-    checkFormatDate(dateToFormatInJS) == "us" &&
-    typeof dateToFormatInJS == "string"
+    checkFormatDate(dateToFormatInJS) === "us" &&
+    typeof dateToFormatInJS === "string"
   ) {
     const DATE_IN_US = dateToFormatInJS.replace(/-/g, ",");
     const DATE_IN_JS = new Date(DATE_IN_US);
     return DATE_IN_JS;
   } else if (
-    checkFormatDate(dateToFormatInJS) == "ptbr" &&
-    typeof dateToFormatInJS == "string"
+    checkFormatDate(dateToFormatInJS) === "ptbr" &&
+    typeof dateToFormatInJS === "string"
   ) {
     const dia = dateToFormatInJS.split("/")[0];
     const mes = dateToFormatInJS.split("/")[1];
@@ -64,7 +64,7 @@ export function formatDateToJs(dateToFormatInJS: string | Date) {
       ano + "," + ("0" + mes).slice(-2) + "," + ("0" + dia).slice(-2);
     const DATE_IN_JS = new Date(DATE_IN_PTBR);
     return DATE_IN_JS;
-  } else if (checkFormatDate(dateToFormatInJS) == "js") {
+  } else if (checkFormatDate(dateToFormatInJS) === "js") {
     return dateToFormatInJS;
   }
 }

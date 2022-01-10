@@ -46,29 +46,3 @@ export function adicionarDiasAteDiaDaSemana(data: any, diaSemana: any) {
   return dataAtualizada;
 }
 
-export function converterDateCalendarToUs(value: any) {
-  let data = value.replace(/-/g, ",");
-
-  data = new Date(data);
-
-  let month = "" + (data.getMonth() + 1)
-  let  day = "" + data.getDate()
-  const  year = data.getFullYear();
-
-  if (month.length < 2) month = "0" + month;
-  if (day.length < 2) day = "0" + day;
-
-  return [year, month, day].join("-");
-}
-
-export function converterDateUsToCalendar(value: any) {
-  const data = value.replace(/-/g, ",");
-  const options: any = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  };
-  const today = new Date(data);
-  const dataConvertida = new Date(today).toLocaleDateString("pt-BR", options);
-  return dataConvertida;
-}

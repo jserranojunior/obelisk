@@ -1,7 +1,7 @@
 import { limitText } from "./limitText/limitText";
 import { dataFormatoBr } from "./convertDates/ptbr/convertDateToPtBr";
+import { dateJstoUs } from "./convertDates/us/convertDateToUs"
+import {dateUStoJs}  from "./convertDates/js/convertDateToJs"
 import { calcularIdadeComMeses } from "./calcularIdadeComMeses/calcularIdadeComMeses";
-// console.log(dataFormatoBr);
-// console.log(calcularIdadeComMeses);
-console.log(limitText);
-export { limitText, dataFormatoBr, calcularIdadeComMeses };
+
+export { limitText, dataFormatoBr, calcularIdadeComMeses, dateJstoUs, dateUStoJs };
