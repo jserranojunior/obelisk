@@ -1,14 +1,26 @@
-# Functions for any projects Typescript
-  > Modulos de funções para usos gerais em typescript usando jest
+# Obelisk
+> Functions for any projects Typescript
+> Modules and function for global use typescript using jest
 
-## calcYearsOldWithMounths
-  > Calcula os anos de idade com meses
+## Instalation
+ > npm i alvitre-obelisk
+ > yarn add alvitre-obelisk
 
-## sliceStringWithDot
-  > Corta uma string adicionando pontos
+## Functions
+### *calcYearsOldWithMounths*
+  > Calculate age with months of life
+  calcYearsOldWithMounths("1993-06-10") = "28 anos e 6 meses"
 
-## formatNumbers
-  >Formata número para os padrões de US, JS, PTBR
+### *sliceStringWithDot*
+  > Cut string adding points
+  sliceStringWithDot("lorem ipsum", 3) = lor ...
 
-## validarToken
-  > Verificando token passando valores diferentes de string preenchida
+### *formatNumbers*
+  > Format numbers to default US, JS, PTBR
+  formatNumbers("1992-06-10") = 10-06-1992
+  formatNumbers("1992,06,10") = 10-06-1992
+
+### validarToken
+  > Verify with token is valid string
+  validarToken(null) = false
+  validarToken(undefined) = false
