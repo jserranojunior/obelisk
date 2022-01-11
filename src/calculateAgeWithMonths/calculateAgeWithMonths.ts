@@ -1,4 +1,4 @@
-export function calcularIdadeComMeses(value: any) {
+export function calculateAgeWithMonths(value: any) {
   const ano = calcularAnosIdade(value);
   const meses = mesesDeVidaNoAnoAtual(value);
   return `${ano} anos e ${meses} meses`;

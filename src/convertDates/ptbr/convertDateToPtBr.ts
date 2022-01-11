@@ -9,7 +9,7 @@ export function convertDateJstoPtBr(value: Date) {
   return new Date(value).toLocaleDateString("pt-BR", OPTIONS);
 }
 
-export function dataFormatoBr(value: string | Date) {
+export function dateFormatPtbr(value: string | Date) {
   const DATEINJS: any = formatDateToJs(value);
   const DATEINPTBR = convertDateJstoPtBr(DATEINJS);
   return DATEINPTBR;

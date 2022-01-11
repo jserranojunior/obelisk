@@ -5,10 +5,10 @@
 - [ ] Colocar instalação e uso no readme
 - [ ] Readme em ingles
   ### Funções
-- [ ] Colocar o nome das funções em inglês
-> - [ ] Validatetoken
-> - [ ] calculateAgeWithMonths
-> - [ ] dateFormatPtbr
+- [x] Colocar o nome das funções em inglês
+- [x] > - [ ] Validatetoken
+- [x] > - [ ] calculateAgeWithMonths
+- [x] > - [ ] dateFormatPtbr
 >  ### validarToken
 > - [ ] Verificar false to return
 > - [ ] Verificar caso tenha mais de 5 digitos na string
