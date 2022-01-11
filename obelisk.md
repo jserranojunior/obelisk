@@ -2,13 +2,13 @@
   ### Testes
 - [x] Adicionar testes
   ### README
-- [ ] Colocar instalação e uso no readme
-- [ ] Readme em ingles
+- [x] Colocar instalação e uso no readme
+- [x] Readme em ingles
   ### Funções
 - [x] Colocar o nome das funções em inglês
-- [x] > - [ ] Validatetoken
-- [x] > - [ ] calculateAgeWithMonths
-- [x] > - [ ] dateFormatPtbr
+- [x] Validatetoken
+- [x] calculateAgeWithMonths
+- [x] dateFormatPtbr
 >  ### validarToken
 > - [ ] Verificar false to return
 > - [ ] Verificar caso tenha mais de 5 digitos na string
