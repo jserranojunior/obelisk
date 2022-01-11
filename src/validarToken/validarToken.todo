@@ -1,0 +1,7 @@
+validarToken
+-- return false
+  - "null"
+  - "undefined"
+  ""
+ null
+ undefined 
