@@ -11,20 +11,24 @@
 ``` yarn add alvitre-obelisk ```
 
 ## Functions
-### *calcYearsOldWithMounths*
-  > Calculate age with months of life
-  calcYearsOldWithMounths("1993-06-10") = "28 anos e 6 meses"
+#### **calcYearsOldWithMounths**
+  > Calculate age with months of life <br>
+  ``` calcYearsOldWithMounths("1993-06-10") ```<br> 
+  return "28 anos e 6 meses"
 
-### *sliceStringWithDot*
-  > Cut string adding points
-  sliceStringWithDot("lorem ipsum", 3) = lor ...
+#### **sliceStringWithDot**
+  > Cut string adding points <br>
+  ```sliceStringWithDot("lorem ipsum", 3)```<br>
+   return "lor ..."
 
-### *formatNumbers*
-  > Format numbers to default US, JS, PTBR
-  formatNumbers("1992-06-10") = 10-06-1992
-  formatNumbers("1992,06,10") = 10-06-1992
+#### **formatNumbers**
+  > Format numbers to default US, JS, PTBR <br>
+  ```formatNumbers("1992-06-10")``` <br>
+  return 10-06-1992<br>
+  ```formatNumbers("1992,06,10")``` <br>
+  return 10-06-1992<br>
 
-### validarToken
-  > Verify with token is valid string
-  validarToken(null) = false
-  validarToken(undefined) = false
+#### **validarToken**
+  > Verify with token is valid string<br>
+  ```validarToken(null)``` <br>return false<br>
+  ```validarToken(undefined)``` <br>return false<br>
