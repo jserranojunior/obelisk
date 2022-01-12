@@ -8,7 +8,7 @@ export function calcularAnosIdade(value: string) {
     const nascimento = value.split("-");
     const dataNascimento = new Date(
       parseInt(nascimento[0], 10),
-      parseInt(nascimento[1], 10) - 1,
+      parseInt(nascimento[1], 10),
       parseInt(nascimento[2], 10)
     );
     const diferenca = Date.now() - dataNascimento.getTime();
@@ -27,31 +27,39 @@ function mesesDeVidaNoAnoAtual(value: string) {
       parseInt(nascimento[2], 10)
     );
     const today = new Date();
-    const mesAtual = today.getMonth();
+    const mesAtual = today.getMonth() + 1
     const diaAtual = today.getDate();
     let meses = 0;
     let mesesFalta = 0;
-    const mesNascimento = dataNascimento.getMonth();
+    const mesNascimento = dataNascimento.getMonth() + 1;
     const diaNascimento = dataNascimento.getDate();
+
+  
+
     if (mesNascimento > mesAtual) {
       mesesFalta = mesNascimento - mesAtual;
       meses = 12 - mesesFalta;
-      if (diaNascimento < diaAtual) {
-        meses = meses - 1;
-      }
-    } else if (mesNascimento < mesAtual) {
-      mesesFalta = mesNascimento + mesAtual;
-      meses = 12 - mesesFalta;
-      if (diaNascimento < diaAtual) {
-        meses = meses - 1;
-      }
-    } else {
-      if (diaNascimento < diaAtual) {
-        meses = 11;
-      } else {
-        meses = 0;
-      }
     }
+    if (mesNascimento < mesAtual) {
+      mesesFalta = mesNascimento + mesAtual;
+      meses = mesesFalta
+    }
+    if(mesNascimento === mesAtual) {
+      meses = 0;
+    }
+    console.log("dia mascimento" + diaNascimento)
+    console.log(diaAtual)
+    if (diaNascimento > diaAtual) {
+      console.log("Dia é maior")
+      meses = meses + 1;
+    }
+
+  
+    
+
     return meses;
   }
 }
+// 08 > 07
+// 06 - 7 = 1
+
