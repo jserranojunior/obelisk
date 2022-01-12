@@ -1,10 +1,14 @@
 # Obelisk
-> Functions for any projects Typescript
-> Modules and function for global use typescript using jest
+> Functions for any projects Typescript <br>
+> Modules and function for global use typescript using jest for tests.
+
+
+<img src="https://pa1.narvii.com/7567/068a52d4e1983fcfc67f6fcbf0a665c7fe7cfa9cr1-612-604_hq.gif" width="35%">
+
 
 ## Instalation
- > npm i alvitre-obelisk
- > yarn add alvitre-obelisk
+``` npm i alvitre-obelisk ``` <br>
+``` yarn add alvitre-obelisk ```
 
 ## Functions
 ### *calcYearsOldWithMounths*
