@@ -1,6 +1,6 @@
 {
   "name": "alvitre-obelisk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Functions in typescript to use",
   "main": "./src/index.ts",
   "repository": "git@github.com:jserranojunior/obelisk.git",

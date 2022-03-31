@@ -15,5 +15,6 @@
 > - [ ] Verificar se é uma string com typeof
   ##### calculateAgeWithMonths
 > - [ ] Pegar data atual e adicionar mais 1 mes para teste
+- [ ] Alterar entre 1 ano e 1 mes e 2 anos e 2 meses no texto
   ### Documentação
 > - [ ] Adicionar documentação automatica
