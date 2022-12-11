@@ -1,3 +1,5 @@
+import { describe, expect, test } from "vitest";
+
 import { convertDateJstoPtBr, dateFormatPtbr } from "./convertDateToPtBr";
 
 describe("convertDateToPtBr()", () => {

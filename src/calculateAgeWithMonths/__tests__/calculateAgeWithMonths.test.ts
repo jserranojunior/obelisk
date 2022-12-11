@@ -1,3 +1,5 @@
+import { describe, expect, test } from "vitest";
+
 import { calculateAgeWithMonths } from "../calculateAgeWithMonths";
 describe("calcularIdadeComMeses()", () => {
   const dateRefenceString = "2022-08-10T03:24:00";
@@ -9,7 +11,6 @@ describe("calcularIdadeComMeses()", () => {
       dateForTest.getMonth() - 2,
       dateForTest.getDay()
     ).toLocaleDateString("fr-ca");
-    console.log(DATE_TWO_MONTHS);
     expect(calculateAgeWithMonths(DATE_TWO_MONTHS, dateToRef)).toBe(
       "0 anos e 2 meses"
     );

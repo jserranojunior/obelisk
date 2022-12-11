@@ -1,19 +1,21 @@
-import {validateToken} from "../validateToken"
+import { describe, expect, test } from "vitest";
 
-describe("validateToken", () =>{
-  test("verificar se for null", ()=>{
-    expect(validateToken(null)).toBe(false)
-  })
-  test("verificar se for undefined", ()=>{
-    expect(validateToken(undefined)).toBe(false)
-  })
-  test("verificar se for 'undefined'", ()=>{
-    expect(validateToken("undefined")).toBe(false)
-  })
-   test("verificar se for ''", ()=>{
-    expect(validateToken("")).toBe(false)
-  })
-     test("verificar se for 'null'", ()=>{
-    expect(validateToken("null")).toBe(false)
-  })
-})
+import { validateToken } from "../validateToken";
+
+describe("validateToken", () => {
+  test("verificar se for null", () => {
+    expect(validateToken(null)).toBe(false);
+  });
+  test("verificar se for undefined", () => {
+    expect(validateToken(undefined)).toBe(false);
+  });
+  test("verificar se for 'undefined'", () => {
+    expect(validateToken("undefined")).toBe(false);
+  });
+  test("verificar se for ''", () => {
+    expect(validateToken("")).toBe(false);
+  });
+  test("verificar se for 'null'", () => {
+    expect(validateToken("null")).toBe(false);
+  });
+});
