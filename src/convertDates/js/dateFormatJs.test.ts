@@ -5,7 +5,7 @@ import {
   verifyLanguageDate,
   checkFormatDate,
   dateFormatJs,
-} from "./formatDateToJs";
+} from "./dateFormatJs";
 
 describe("formatDateToJs()", () => {
   test("verifyTypeOf withDateJs(return aways = 'date')", () => {

@@ -1,4 +1,4 @@
-import { dateFormatJs } from "../js/formatDateToJs";
+import { dateFormatJs } from "../js/dateFormatJs";
 
 export function convertDatePtBrToJs(value: Date) {
   const OPTIONS: any = {

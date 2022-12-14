@@ -12,15 +12,7 @@
 
 ## Functions
 
-#### **calcYearsOldWithMounths**
-
-> Calculate age with months of life <br> > `calcYearsOldWithMounths("1993-06-10")`<br>
-> return "28 anos e 6 meses"
-
-#### **limitText**
-
-> Cut string adding points <br> > `limitText("lorem ipsum", 3)`<br>
-> return "lor ..."
+### **Convert dates from JS, US or PTBR**
 
 #### **dateFormatPtbr**
 
@@ -37,6 +29,20 @@
 > Date US to JS full format<br> > `dateFormatJS(new Date("1992-06-10"))` <br>
 > return 1992-06-10T03:00:00.000Z<br>
 
+<br><br>
+
+### **Other functions to use**
+
 #### **validarToken**
 
 > Verify with token is valid string<br> > `validarToken(null)` <br>return false<br> > `validarToken(undefined)` <br>return false<br>
+
+#### **calcYearsOldWithMounths**
+
+> Calculate age with months of life <br> > `calcYearsOldWithMounths("1993-06-10")`<br>
+> return "28 anos e 6 meses"
+
+#### **limitText**
+
+> Cut string adding points <br> > `limitText("lorem ipsum", 3)`<br>
+> return "lor ..."

@@ -1,7 +1,7 @@
 import { limitText } from "./limitText/limitText";
-import { dateFormatPtbr } from "./convertDates/ptbr/convertDateToPtBr";
+import { dateFormatPtbr } from "./convertDates/ptbr/dateFormatPtbr";
 import { dateFormatUs } from "./convertDates/us/convertDateToUs";
-import { dateFormatJs } from "./convertDates/js/formatDateToJs";
+import { dateFormatJs } from "./convertDates/js/dateFormatJs";
 import { calculateAgeWithMonths } from "./calculateAgeWithMonths/calculateAgeWithMonths";
 import { validateToken } from "./validateToken/validateToken";
 export {
