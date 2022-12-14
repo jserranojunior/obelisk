@@ -4,10 +4,10 @@ import {
   verifyTypeOf,
   verifyLanguageDate,
   checkFormatDate,
-  formatDateToJs,
-} from "./convertDateToJs";
+  dateFormatJs,
+} from "./formatDateToJs";
 
-describe("convertDateToJS()", () => {
+describe("formatDateToJs()", () => {
   test("verifyTypeOf withDateJs(return aways = 'date')", () => {
     const ACTUAL_DATE = new Date();
     expect(verifyTypeOf(ACTUAL_DATE)).toBe("date");
@@ -35,10 +35,15 @@ describe("convertDateToJS()", () => {
     const ACTUAL_DATE = new Date();
     expect(checkFormatDate(ACTUAL_DATE)).toBe("js");
   });
+  test("formatDateToJs with dateJS(return aways = '1993-06-10T03:00:00.000Z')", () => {
+    expect(dateFormatJs(new Date("1993, 06, 10"))).toEqual(
+      new Date("1993,06,10")
+    );
+  });
   test("formatDateToJs with dateUs(return aways = '1993-06-10T03:00:00.000Z')", () => {
-    expect(formatDateToJs("1993-06-10")).toEqual(new Date("1993,06,10"));
+    expect(dateFormatJs("1993-06-10")).toEqual(new Date("1993,06,10"));
   });
   test("formatDateToJs with datePtBr(return aways = '1993-06-10T03:00:00.000Z')", () => {
-    expect(formatDateToJs("10/06/1993")).toEqual(new Date("1993,06,10"));
+    expect(dateFormatJs("10/06/1993")).toEqual(new Date("1993,06,10"));
   });
 });

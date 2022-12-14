@@ -27,14 +27,14 @@
 > Date US and JS to PTBR format<br> > `dateFormatPtbr("1992-06-10")` <br>
 > return 10/06/1992<br>
 
-#### **dateJstoUs**
+#### **dateFormatUs**
 
-> Date JS to US format<br> > `dateJstoUs(new Date("1992,06,10"))` <br>
+> Date JS to US format<br> > `dateFormatUs(new Date("1992,06,10"))` <br>
 > return 1992-06-10<br>
 
-#### **dateUStoJsFull**
+#### **dateFormatJs**
 
-> Date US to JS full format<br> > `dateJstoUs(new Date("1992-06-10"))` <br>
+> Date US to JS full format<br> > `dateFormatJS(new Date("1992-06-10"))` <br>
 > return 1992-06-10T03:00:00.000Z<br>
 
 #### **validarToken**

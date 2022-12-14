@@ -45,7 +45,7 @@ export function checkFormatDate(value: string | Date) {
   }
 }
 
-export function formatDateToJs(dateToFormatInJS: string | Date) {
+export function dateFormatJs(dateToFormatInJS: string | Date) {
   if (
     checkFormatDate(dateToFormatInJS) === "us" &&
     typeof dateToFormatInJS === "string"
