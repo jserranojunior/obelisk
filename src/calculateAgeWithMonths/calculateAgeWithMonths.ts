@@ -1,9 +1,14 @@
 import internal from "stream";
 
-export function calculateAgeWithMonths(value: any, dateJsToCompare: Date) {
+export function calculateAgeWithMonths(
+  value: any,
+  dateJsToCompare: Date = new Date()
+) {
   const actualDate = dateJsToCompare;
   const ano: number = calculateYearsOfLife(value, actualDate);
   const meses: number = calculateMonthOfLife(value, dateJsToCompare);
+  console.log(meses, "meses");
+
   const IDADE = { ano: ano, mes: meses };
 
   return formatNameYearsMonth(IDADE);
@@ -31,7 +36,6 @@ export function calculateYearsOfLife(
 export function formatNameYearsMonth(idade: { ano: number; mes: number }) {
   let nameMonth = "meses";
   let nameYear = "anos";
-
   if (idade.mes == 1) {
     nameMonth = "mês";
   }
@@ -67,7 +71,7 @@ export function calculateMonthOfLife(
     const monthBirth = birthdate.getMonth();
     const dayActual = dateActual.getDate();
 
-    const dayBirth = birthdate.getDate();
+    const dayBirth = birthdate.getDate() + 1;
 
     let monthCont = 0;
     let mesesFalta = 0;
@@ -76,7 +80,13 @@ export function calculateMonthOfLife(
       compareMonthWithActualDate(birthToCalculate, dateJsToCompare) == "larger"
     ) {
       mesesFalta = monthBirth - monthActual;
-      monthCont = mesesFalta;
+      monthCont = 12 - mesesFalta;
+
+      console.log(dayBirth, "dayBirth", birthdate, "dayActual", dayActual);
+
+      if (dayBirth > dayActual) {
+        monthCont = monthCont - 1;
+      }
     } else if (
       compareMonthWithActualDate(birthToCalculate, dateJsToCompare) == "smaller"
     ) {
@@ -91,6 +101,9 @@ export function calculateMonthOfLife(
         monthCont = 11;
       }
     }
+
+    console.log(monthCont, "monthBirth", birthdate);
+
     return monthCont;
   } else {
     return 0;
