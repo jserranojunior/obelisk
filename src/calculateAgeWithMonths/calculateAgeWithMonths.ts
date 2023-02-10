@@ -7,7 +7,6 @@ export function calculateAgeWithMonths(
   const actualDate = dateJsToCompare;
   const ano: number = calculateYearsOfLife(value, actualDate);
   const meses: number = calculateMonthOfLife(value, dateJsToCompare);
-  console.log(meses, "meses");
 
   const IDADE = { ano: ano, mes: meses };
 
@@ -82,8 +81,6 @@ export function calculateMonthOfLife(
       mesesFalta = monthBirth - monthActual;
       monthCont = 12 - mesesFalta;
 
-      console.log(dayBirth, "dayBirth", birthdate, "dayActual", dayActual);
-
       if (dayBirth > dayActual) {
         monthCont = monthCont - 1;
       }
@@ -95,14 +92,14 @@ export function calculateMonthOfLife(
     } else if (
       compareMonthWithActualDate(birthToCalculate, dateJsToCompare) == "equal"
     ) {
-      if (dayBirth > dayActual) {
+      console.log(dayBirth, "<", dayActual);
+
+      if (dayBirth < dayActual) {
         monthCont = 0;
       } else {
         monthCont = 11;
       }
     }
-
-    console.log(monthCont, "monthBirth", birthdate);
 
     return monthCont;
   } else {

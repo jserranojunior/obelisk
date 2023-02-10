@@ -64,7 +64,19 @@ describe("calcularIdadeComMeses()", () => {
   test("calculateAgeWithMonths DATE_USER (return aways = '72 anos e 8 meses')", () => {
     const DATE_USER = "1950-05-08";
     expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
-      "72 anos e 8 meses"
+      "72 anos e 9 meses"
+    );
+  });
+  test("calculateAgeWithMonths DATE_USER (return aways = '52 anos e 0 meses')", () => {
+    const DATE_USER = "1971-02-03";
+    expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
+      "52 anos e 0 meses"
+    );
+  });
+  test("calculateAgeWithMonths DATE_USER (return aways = '72 anos e 8 meses')", () => {
+    const DATE_USER = "1972-04-29";
+    expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
+      "50 anos e 9 meses"
     );
   });
 });
