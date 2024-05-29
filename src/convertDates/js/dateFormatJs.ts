@@ -50,8 +50,9 @@ export function dateFormatJs(dateToFormatInJS: string | Date) {
     checkFormatDate(dateToFormatInJS) === "us" &&
     typeof dateToFormatInJS === "string"
   ) {
-    const DATE_IN_US = dateToFormatInJS.replace(/-/g, ",");
-    const DATE_IN_JS = new Date(DATE_IN_US);
+    const parts = dateToFormatInJS.split("-").map(Number);
+    // Cria um objeto Date usando as partes
+    const DATE_IN_JS = new Date(parts[0], parts[1] - 1, parts[2]);
     return DATE_IN_JS;
   } else if (
     checkFormatDate(dateToFormatInJS) === "ptbr" &&

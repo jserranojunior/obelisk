@@ -7,6 +7,17 @@ import {
   validateToken,
 } from "./index";
 
+const dataUSInJs = dateFormatJs("2022-05-13")
+
+console.log(
+  dataUSInJs,
+  " : dateUStoJsFull - DateJs 2022-05-13 \n"
+);
+
+if(dataUSInJs){
+console.log("dataUSInJs em PTBR", dateFormatPtbr(dataUSInJs))
+}
+
 console.log(limitText("Abobora", 3), " : limitText - Return Abo ...");
 console.log(dateFormatPtbr("2022-12-13"), " : dateFormatPtbr - 13/12/2022");
 
