@@ -3,7 +3,10 @@
   "version": "1.2.6",
   "description": "Functions in typescript to use",
   "main": "./src/index.ts",
-  "repository": "git@github.com:jserranojunior/obelisk.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jserranojunior/obelisk.git"
+  },
   "author": "Jorge Serrano Junior <jorgeserranojunior@hotmail.com>",
   "license": "MIT",
   "private": false,
