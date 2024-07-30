@@ -45,38 +45,50 @@ describe("calcularIdadeComMeses()", () => {
       dateForTest.getDay() + 10
     ).toLocaleDateString("fr-ca");
     expect(calculateAgeWithMonths(DATE_ON_YEAR_TWO_MONTHS_ONE_DAY)).toBe(
-      "1 ano e 2 meses"
+      "1 ano e 3 meses"
     );
-  });
-  test("calculateAgeWithMonths DATE_FORTY (return aways = '76 anos e 11 meses')", () => {
-    const DATE_FORTY = "1945-08-11";
-    expect(calculateAgeWithMonths(DATE_FORTY)).toBe("77 anos e 5 meses");
-  });
-  test("calculateAgeWithMonths DATE_USER (return aways = '44 anos e 7 meses')", () => {
-    const DATE_USER = "1978-01-05";
-    expect(calculateAgeWithMonths(DATE_USER)).toBe("45 anos e 1 mês");
-  });
-  test("calculateAgeWithMonths DATE_USER (return aways = '37 anos e 6 mês')", () => {
-    const DATE_USER = "1985-07-18";
-    expect(calculateAgeWithMonths(DATE_USER)).toBe("37 anos e 6 meses");
   });
 
-  test("calculateAgeWithMonths DATE_USER (return aways = '72 anos e 8 meses')", () => {
+
+  test("calculateAgeWithMonths DATE_FORTY IN BRAZILIAN DATE (return aways = '78 anos e 11 meses')", () => {
+/*     const DATE_FORTY = "1990-04-21";
+ */
+     const DATE_FORTY = "21/04/1990";
+    expect(calculateAgeWithMonths(DATE_FORTY)).toBe("34 anos e 3 meses");
+  });
+
+
+/*   DATAS FIXAS ABAIXO */
+
+  test("calculateAgeWithMonths DATE_FORTY (return aways = '78 anos e 11 meses')", () => {
+    const DATE_FORTY = "1945-08-11";
+    expect(calculateAgeWithMonths(DATE_FORTY)).toBe("78 anos e 11 meses");
+  });
+  test("calculateAgeWithMonths DATE_USER (return aways = '46 anos e 6 meses')", () => {
+    const DATE_USER = "1978-01-05";
+    expect(calculateAgeWithMonths(DATE_USER)).toBe("46 anos e 6 meses");
+  });
+  test("calculateAgeWithMonths DATE_USER (return aways = '39 anos e 0 mês')", () => {
+    const DATE_USER = "1985-07-18";
+    expect(calculateAgeWithMonths(DATE_USER)).toBe("39 anos e 0 meses");
+  });
+
+  test("calculateAgeWithMonths DATE_USER (return aways = '74 anos e 2 meses')", () => {
     const DATE_USER = "1950-05-08";
     expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
-      "72 anos e 9 meses"
+      "74 anos e 2 meses"
     );
   });
-  test("calculateAgeWithMonths DATE_USER (return aways = '52 anos e 0 meses')", () => {
+  test("calculateAgeWithMonths DATE_USER (return aways = '53 anos e 5 meses')", () => {
     const DATE_USER = "1971-02-03";
     expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
-      "52 anos e 0 meses"
+      "53 anos e 5 meses"
     );
   });
-  test("calculateAgeWithMonths DATE_USER (return aways = '72 anos e 8 meses')", () => {
+  test("calculateAgeWithMonths DATE_USER (return aways = '52 anos e 3 meses')", () => {
     const DATE_USER = "1972-04-29";
     expect(calculateAgeWithMonths(DATE_USER)).toStrictEqual(
-      "50 anos e 9 meses"
+      "52 anos e 3 meses"
     );
   });
 });

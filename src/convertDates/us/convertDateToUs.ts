@@ -11,8 +11,8 @@ export function convertDatePtBrToJs(value: Date) {
 
 export function dateFormatUs(value: string | Date) {
   const DATEINJS: any = dateFormatJs(value);
-  const DATEINPTBR = convertDatePtBrToJs(DATEINJS);
-  return DATEINPTBR;
+  const DATEINUS = dateJstoUs(DATEINJS);
+  return DATEINUS;
 }
 
 export function dateJstoUs(value: any) {
