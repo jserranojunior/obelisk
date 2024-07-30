@@ -1,4 +1,5 @@
 import internal from "stream";
+import {dateFormatUs} from '../convertDates/us/convertDateToUs'
 
 export function calculateAgeWithMonths(
   value: any,
@@ -64,7 +65,8 @@ export function calculateMonthOfLife(
   dateJsToCompare: Date
 ) {
   if (birthToCalculate.length === 10) {
-    const birthdate = new Date(birthToCalculate);
+    const birthUS = dateFormatUs(birthToCalculate)
+    const birthdate = new Date(birthUS);
     const dateActual = dateJsToCompare;
     const monthActual = dateActual.getMonth();
     const monthBirth = birthdate.getMonth();
