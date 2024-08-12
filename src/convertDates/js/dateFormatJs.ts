@@ -45,7 +45,7 @@ export function checkFormatDate(value: string | Date) {
   }
 }
 
-export function dateFormatJs(dateToFormatInJS: string | Date) {
+export function dateFormatJs(dateToFormatInJS: any) {
   if (
     checkFormatDate(dateToFormatInJS) === "us" &&
     typeof dateToFormatInJS === "string"
@@ -55,15 +55,12 @@ export function dateFormatJs(dateToFormatInJS: string | Date) {
     const DATE_IN_JS = new Date(parts[0], parts[1] - 1, parts[2]);
     return DATE_IN_JS;
   } else if (
-    checkFormatDate(dateToFormatInJS) === "ptbr" &&
-    typeof dateToFormatInJS === "string"
+    checkFormatDate(dateToFormatInJS) === "ptbr" 
   ) {
     const dia = dateToFormatInJS.split("/")[0];
-    const mes = dateToFormatInJS.split("/")[1];
+    const mes = dateToFormatInJS.split("/")[1] - 1;
     const ano = dateToFormatInJS.split("/")[2];
-    const DATE_IN_PTBR =
-      ano + "," + ("0" + mes).slice(-2) + "," + ("0" + dia).slice(-2);
-    const DATE_IN_JS = new Date(DATE_IN_PTBR);
+    const DATE_IN_JS = new Date(ano, mes, dia);
     return DATE_IN_JS;
   } else if (checkFormatDate(dateToFormatInJS) === "js") {
     return dateToFormatInJS;
