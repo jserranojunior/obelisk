@@ -2,7 +2,7 @@
 
 > **TypeScript Utility Toolkit**
 
-> A collection of reusable functions and modules for TypeScript projects. Tested with Jest.
+> A collection of reusable functions and modules for TypeScript projects. Tested with Vitest.
 
 <img  src="https://pa1.narvii.com/7567/068a52d4e1983fcfc67f6fcbf0a665c7fe7cfa9cr1-612-604_hq.gif"  width="35%"  alt="Obelisk Logo">
 
@@ -102,7 +102,7 @@ limitText("lorem ipsum", 3); // "lor..."
 
 ## Development
 
-Tests powered by Jest:
+Tests powered by Vistest:
 
 ```bash
 
@@ -151,7 +151,7 @@ MIT © [Your Name](https://github.com/your-profile)
 
 > **TypeScript Utility Toolkit**
 
-> A collection of reusable functions and modules for TypeScript projects. Tested with Jest.
+> A collection of reusable functions and modules for TypeScript projects. Tested with Vitest.
 
 <img  src="https://pa1.narvii.com/7567/068a52d4e1983fcfc67f6fcbf0a665c7fe7cfa9cr1-612-604_hq.gif"  width="35%"  alt="Obelisk Logo">
 
@@ -251,7 +251,7 @@ limitText("lorem ipsum", 3); // "lor..."
 
 ## Development
 
-Tests powered by Jest:
+Tests powered by Vitest:
 
 ```bash
 
